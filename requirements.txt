@@ -1,4 +1,4 @@
 uvicorn==0.17.6
 fastapi==0.78.0
-TwitterHandler==1.0.2
-python-dotenv
+TwitterHandler==1.1.0
+python-dotenv==0.20.0

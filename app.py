@@ -18,20 +18,17 @@ async def index():
     return {"Hello": "From index"}
 
 
-@app.get('/start_stream')
-async def start_stream(query: str):
-    streamer.start_stream(query)
-    return {"Stream": "Started!!!"}
+@app.get('/start')
+async def start_twitter_stream(topic: str):
+    streamer.start_stream(topic)
+    return {"Status": "started"}
 
 
-@app.get('/stop_stream')
-async def stop_stream():
+@app.get('/stop')
+async def stop_twitter_stream():
     streamer.stop_stream()
-    return {"Stream": "Stopped!!!"}
+    return {"Status": "stopped"}
 
-@app.get('/other')
-async def other():
-    return {"Hello": "From other"}
 
 
 if __name__ == "__main__":
