@@ -35,3 +35,9 @@ docker container:
     $ docker build . -t twitter-handler-api
     $ docker run -p 9003:9003 -d --name twitter-handler-api twitter-handler-api
 ``` 
+
+## Environment Variables
+- `BEARER_TOKEN`: Twitter's API v2 bearer token.
+- `KAFKA_HOST`: The Kafka broker host.
+- `KAFKA_PORT`: The Kafka broker port.
+- `KAFKA_TOPIC`: The Kafka broker topic.
