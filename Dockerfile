@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:slim
+FROM python:3.9-slim
 
 
 # set work directory
