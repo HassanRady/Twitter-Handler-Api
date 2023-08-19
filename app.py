@@ -1,3 +1,4 @@
+import os
 from os.path import join, dirname
 from dotenv import load_dotenv
 dotenv_path = join(dirname(__file__), '.env')
@@ -8,10 +9,10 @@ from fastapi import FastAPI
 
 from TwitterHandler.Kafka.stream import Streamer 
 
-
 app = FastAPI()
-streamer = Streamer()
 
+BEARER_TOKEN = os.environ['BEARER_TOKEN']
+streamer = Streamer(BEARER_TOKEN)
 
 @app.get('/')
 async def index():
